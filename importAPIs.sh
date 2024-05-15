@@ -3,6 +3,8 @@
 # NOTE: Create the following environment variables before running
 export USER_NAME=admin
 export PASSWORD='781~f*{-q)qSy+<6d(.l^)Q4'
+export USER_NAME=zliang
+export PASSWORD='passw0rd'
 export CLIENT_ID=demo-restapi-client-app1
 export CLIENT_SEC=secret1234
 
@@ -34,7 +36,7 @@ orgs=$(curl --location --request GET -k "https://$PLATFORM_API/api/cloud/orgs" -
 # -------------------------------------
 # Get provider organization token
 # -------------------------------------
-provider_token=$(curl --location --request POST -k "https://$PLATFORM_API/api/token" --header "Content-Type: application/json" --header "Accept: application/json" --data-raw "{\"username\": \"$USER_NAME\",\"password\": \"$PASSWORD\",\"realm\": \"provider/$PORG_IDP\",\"client_id\": \"$CLIENT_ID\",\"client_secret\": \"$CLIENT_SEC\",\"grant_type\": \"password\"}" | jq .access_token | sed -e s/\"//g)
+provider_token=$(curl --location --request POST -k "https://$PLATFORM_API/api/token" --header "Content-Type: application/json" --header "Accept: application/json" --data-raw "{\"username\": \"$USER_NAME1\",\"password\": \"$PASSWORD1\",\"realm\": \"provider/$PORG_IDP\",\"client_id\": \"$CLIENT_ID\",\"client_secret\": \"$CLIENT_SEC\",\"grant_type\": \"password\"}" | jq .access_token | sed -e s/\"//g)
 
 
 # -------------------------------------
