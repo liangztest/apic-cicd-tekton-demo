@@ -16,7 +16,7 @@ export ADMIN_IDP=default-idp-1
 export PORG_IDP=default-idp-2
 
 # Provider organization
-export PORG=devops-demo
+export PORG=test1
 
 # -------------------------------------
 # Get admin bearer token
