@@ -1,0 +1,10 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: apic-demo-listener
+spec:
+  serviceAccountName: pipeline
+  triggers:
+  - name: apic-demo-trigger
+    template:
+      name: apic-demo-trigger

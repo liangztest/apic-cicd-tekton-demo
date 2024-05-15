@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: apic-demo-pipeline
+spec:
+  resources:
+  - name: git-repo
+    type: git
+  tasks:
+  - name: deploy-apis
+    taskRef:
+      name: apic-demo-deploy-task
+    resources:
+      inputs:
+      - name: source
+        resource: git-repo

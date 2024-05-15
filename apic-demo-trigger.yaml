@@ -1,0 +1,21 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: apic-demo-trigger
+spec:
+  resourcetemplates:
+  - apiVersion: tekton.dev/v1beta1
+    kind: PipelineRun
+    metadata:
+      generateName: apic-demo-pipeline-run-
+      namespace: apic-pipeline
+      labels:
+        tekton.dev/pipeline: apic-demo-pipeline
+    spec:
+      pipelineRef:
+        name: apic-demo-pipeline
+      resources:
+        - name: git-repo
+          resourceRef:
+            name: apic-demo-git
+      serviceAccountName: pipeline

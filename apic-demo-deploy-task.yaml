@@ -1,0 +1,29 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: apic-demo-deploy-task
+spec:
+  resources:
+    inputs:
+    - name: source
+      type: git
+  steps:
+  - name: deploy
+    image: image-registry.openshift-image-registry.svc:5000/apic-pipeline/apic-cicd-demo:v1.0.0
+    script: |
+      export USER_NAME=sreckoj
+      export PASSWORD=passw0rd
+      export CLIENT_ID=demo-restapi-client-app1
+      export CLIENT_SEC=secret1234
+      chmod 755 importAPIs.sh
+      ./importAPIs.sh
+    resources: {}
+    securityContext:
+      privileged: true
+    volumeMounts:
+    - mountPath: /var/lib/containers
+      name: varlibcontainers
+    workingDir: /workspace/source
+  volumes:
+  - emptyDir: {}
+    name: varlibcontainers
