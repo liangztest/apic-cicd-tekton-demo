@@ -1,17 +1,17 @@
 #! /bin/bash
 
 # NOTE: Create the following environment variables before running
-export USER_NAME=test
-export PASSWORD='test'
-export USER_NAME1=test1
-export PASSWORD1='test1'
-export CLIENT_ID=demo-restapi-client-app1
-export CLIENT_SEC=test2
+# export USER_NAME=test
+# export PASSWORD='test'
+# export USER_NAME1=test1
+# export PASSWORD1='test1'
+# export CLIENT_ID=demo-restapi-client-app1
+# export CLIENT_SEC=test2
 
 
 # Endpoints
-export PLATFORM_API=test.../apis/cp4i/small
-export API_MANAGER=test23423
+# export PLATFORM_API=test.../apis/cp4i/small
+# export API_MANAGER=test23423
 
 # Identity providers
 export ADMIN_IDP=default-idp-1
