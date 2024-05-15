@@ -3,8 +3,8 @@
 # NOTE: Create the following environment variables before running
 export USER_NAME=admin
 export PASSWORD='781~f*{-q)qSy+<6d(.l^)Q4'
-export USER_NAME=zliang
-export PASSWORD='passw0rd'
+export USER_NAME1=zliang
+export PASSWORD1='passw0rd'
 export CLIENT_ID=demo-restapi-client-app1
 export CLIENT_SEC=secret1234
 
