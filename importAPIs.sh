@@ -1,15 +1,15 @@
 #! /bin/bash
 
 # NOTE: Create the following environment variables before running
-# export USER_NAME=
-# export PASSWORD=
-# export CLIENT_ID=
-# export CLIENT_SEC=
+export USER_NAME=admin
+export PASSWORD='781~f*{-q)qSy+<6d(.l^)Q4'
+export CLIENT_ID=demo-restapi-client-app1
+export CLIENT_SEC=secret1234
 
 
 # Endpoints
-export PLATFORM_API=v10-mgmt-platform-api-apic.apic-...ams03.containers.appdomain.cloud
-export API_MANAGER=v10-mgmt-api-manager-apic.apic-...ams03.containers.appdomain.cloud
+export PLATFORM_API=cpd-integration.apps.664192be858a4d001e34fc7f.cloud.techzone.ibm.com/integration/apis/cp4i/small
+export API_MANAGER=small-mgmt-api-manager-cp4i.apps.664192be858a4d001e34fc7f.cloud.techzone.ibm.com
 
 # Identity providers
 export ADMIN_IDP=default-idp-1
